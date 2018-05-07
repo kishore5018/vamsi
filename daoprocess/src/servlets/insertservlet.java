@@ -15,7 +15,7 @@ public class insertservlet extends HttpServlet{
 	
 	
 	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException {
-		
+		System.out.println("hai");
 		userbean user=new userbean();
 		user.setUsername(request.getParameter("username"));
 		user.setPassword(request.getParameter("password"));
