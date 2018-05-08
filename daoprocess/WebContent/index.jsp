@@ -6,9 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>CRUD OPERATIONS</title>
 </head>
-<body>
-<h1>CRUD OPERATIONS</h1>
+<body bgcolor="#388B8A">
+<center><u>CRUD OPERATIONS</u></center><br><br>
+<h3><u>List Of Operations</u></h3>
 <a href="insert.jsp">INSERT</a>
+<a href="fetch.jsp">FETCH</a>
 
 </body>
 </html>
