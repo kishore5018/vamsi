@@ -12,8 +12,8 @@ import userbean.userbean;
 
 @WebServlet("/insertservlet")
 public class insertservlet extends HttpServlet{
-	
-	
+	private static final long serialVersionUID = 1L;
+
 	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException {
 		System.out.println("hai");
 		userbean user=new userbean();
