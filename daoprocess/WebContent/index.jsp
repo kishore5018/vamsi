@@ -9,7 +9,7 @@
 <body bgcolor="#388B8A">
 <center><u>CRUD OPERATIONS</u></center><br><br>
 <h3><u>List Of Operations</u></h3>
-<a href="insert.jsp">INSERT</a>
+<a href="insert.jsp">INSERT</a><br/>
 <a href="fetch.jsp">FETCH</a>
 
 </body>
