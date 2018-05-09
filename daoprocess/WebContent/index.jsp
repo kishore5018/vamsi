@@ -9,5 +9,7 @@
 <body>
 <h1>CRUD OPERATIONS</h1>
 <a href="insert.jsp">INSERT</a>
+<a href="fetch.jsp">FETCH</a>
+<a href="details.jsp">DETAILS</a>
 </body>
 </html>
