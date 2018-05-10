@@ -10,6 +10,5 @@
 <h1><center>CRUD OPERATIONS</center></h1>
 <a href="insert.jsp">INSERT</a><br><br>
 <a href="fetch.jsp">FETCH</a><br><br>
-<a href="details.jsp">DETAILS</a><br><br>
 </body>
 </html>
