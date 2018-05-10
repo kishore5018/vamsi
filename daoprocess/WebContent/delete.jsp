@@ -21,12 +21,9 @@ pstmt.setString(1, username);
 ResultSet rs=pstmt.executeQuery();
 boolean req=rs.next();
 %>
-<form action="updateservlet" method="post">
+<form action="deleteservlet" method="post">
 UserName:<input type="text" name="username"  value=<%=rs.getString("username") %> required><br><br>
-PassWord:<input type="text" name="password"  value=<%=rs.getString("password") %>><br><br>
-Email::::<input type="text" name="email"     value=<%=rs.getString("email") %>><br><br>
-Id:::::::<input type="text" name="id"        value=<%=rs.getInt("id") %>><br><br>
-<input type="submit" value="UPDATE">
+<input type="submit" value="DELETE">
 
 </form>
 
@@ -40,5 +37,6 @@ Id:::::::<input type="text" name="id"        value=<%=rs.getInt("id") %>><br><br
 
 
 %>
+
 </body>
 </html>
