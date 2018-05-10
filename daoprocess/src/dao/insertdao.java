@@ -12,8 +12,8 @@ public class insertdao {
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","cubic","cubic");
-			PreparedStatement pstmt=conn.prepareStatement("insert into empdata(username,password,email,id) values (?,?,?,?)");
+			Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
+			PreparedStatement pstmt=conn.prepareStatement("insert into emp(username,password,email,id) values (?,?,?,?)");
 			pstmt.setString(1, user.getUsername());
 			pstmt.setString(2, user.getPassword());
 			pstmt.setString(3, user.getEmail());

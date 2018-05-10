@@ -12,8 +12,8 @@ public class updatedao {
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","cubic","cubic");
-			PreparedStatement pstmt=conn.prepareStatement("update empdata set password=?,email=?,id=? where username=?");
+			Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
+			PreparedStatement pstmt=conn.prepareStatement("update emp set password=?,email=?,id=? where username=?");
 			pstmt.setString(4, user.getUsername());
 			pstmt.setString(1, user.getPassword());
 			pstmt.setString(2, user.getEmail());

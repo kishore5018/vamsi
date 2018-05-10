@@ -15,14 +15,17 @@
 try{
 String username=request.getParameter("user");
 Class.forName("oracle.jdbc.driver.OracleDriver");
-Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","cubic","cubic");
-PreparedStatement pstmt=conn.prepareStatement("select * from empdata where username=?");
+Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
+PreparedStatement pstmt=conn.prepareStatement("select * from emp where username=?");
 pstmt.setString(1, username);
 ResultSet rs=pstmt.executeQuery();
 boolean req=rs.next();
 %>
 <form action="deleteservlet" method="post">
-UserName:<input type="text" name="username"  value=<%=rs.getString("username") %> required><br><br>
+UserName:<input type="text" name="username"  value=<%=rs.getString("username") %>><br><br>
+PassWord:<input type="text" name="password"  value=<%=rs.getString("password") %>><br><br>
+Email::::<input type="text" name="email"     value=<%=rs.getString("email") %>><br><br>
+Id:::::::<input type="text" name="id"        value=<%=rs.getInt("id") %>><br><br>
 <input type="submit" value="DELETE">
 
 </form>

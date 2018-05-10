@@ -15,8 +15,8 @@
 try{
 String username=request.getParameter("user");
 Class.forName("oracle.jdbc.driver.OracleDriver");
-Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","cubic","cubic");
-PreparedStatement pstmt=conn.prepareStatement("select * from empdata where username=?");
+Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
+PreparedStatement pstmt=conn.prepareStatement("select * from emp where username=?");
 pstmt.setString(1, username);
 ResultSet rs=pstmt.executeQuery();
 boolean req=rs.next();
