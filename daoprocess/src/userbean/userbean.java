@@ -30,8 +30,8 @@ public class userbean {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	
-	
-	
 }
+	
+	
+	
+	

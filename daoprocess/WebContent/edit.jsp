@@ -22,7 +22,7 @@ ResultSet rs=pstmt.executeQuery();
 boolean req=rs.next();
 %>
 <form action="updateservlet" method="post">
-UserName:<input type="text" name="username"  value=<%=rs.getString("username") %> required><br><br>
+UserName:<input type="text" name="username"  value=<%=rs.getString("username") %> ><br><br>
 PassWord:<input type="text" name="password"  value=<%=rs.getString("password") %>><br><br>
 Email::::<input type="text" name="email"     value=<%=rs.getString("email") %>><br><br>
 Id:::::::<input type="text" name="id"        value=<%=rs.getInt("id") %>><br><br>

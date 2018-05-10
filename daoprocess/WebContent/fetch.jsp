@@ -17,6 +17,7 @@
 <th>UserName</th>
 <th>Password</th>
 <th>Email</th>
+<th>Id</th>
 <th>To Do's</th>
 </tr>
 <%
@@ -33,7 +34,8 @@ try
 		<td><%=rs.getString("username") %></td>
 		<td><%=rs.getString("password") %></td>
 		<td><%=rs.getString("email") %></td>
-		<td>  <a href="edit.jsp?user=<%=rs.getString("username")%>">EDIT</a>  <a href="delete.jsp?user=<%=rs.getString("username")%>">DELETE</a> </td>
+		<td><%=rs.getInt("id")%></td>
+		<td>  <a href="edit.jsp?user=<%=rs.getString("username")%>">EDIT</a>  <a href="delete.jsp?id=<%=rs.getInt("id")%>">DELETE</a> </td>
 		</tr>	
 		<% 
 	}
