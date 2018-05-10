@@ -18,7 +18,6 @@
 <th>Email</th>
 <th>To Do's</th>
 </tr>
-
 <%
 try
 {
@@ -34,11 +33,7 @@ try
 		<td><%=rs.getString("password") %></td>
 		<td><%=rs.getString("email") %></td>
 		<td>  <a href="edit.jsp?user=<%=rs.getString("username")%>">EDIT</a>  <a href="delete.jsp">DELETE</a> </td>
-		</tr>
-		
-		
-		
-		
+		</tr>	
 		<% 
 	}
 }
@@ -46,17 +41,36 @@ catch(Exception e)
 {
 	System.out.println(e);
 }
-
-
 %>
-
-
-
-
 </table>
-
 <a href="index.jsp">HOME</a>
-
-
+<th>PassWord</th>
+<th>Email</th>
+<th>To Do's</th>
+</tr>
+<%
+try{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","cubic","cubic");
+	PreparedStatement pstmt=conn.prepareStatement("select * from empdata");
+	ResultSet rs=pstmt.executeQuery();
+    while(rs.next()){
+    	%>
+    	<tr>
+    	<td><%=rs.getString("username") %></td>
+    	<td><%=rs.getString("password") %></td>
+    	<td><%=rs.getString("email") %></td>
+    	<td><a href="edit.jsp">EDIT</a> <a href="delete.jsp">DELETE</a></td>
+    	
+    	</tr>
+    	<% 	
+    }
+}catch(Exception e)
+{
+	System.out.println(e);
+}
+%>
+</table>
+<a href="index.jsp">HOME</a>
 </body>
 </html>

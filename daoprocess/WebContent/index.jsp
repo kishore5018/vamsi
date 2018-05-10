@@ -4,12 +4,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>CRUD OPERATIONS</title>
 </head>
+<<<<<<< HEAD
 <body>
 <h1>CRUD OPERATIONS</h1>
 <a href="insert.jsp">INSERT</a>
 <a href="fetch.jsp">FETCH</a>
 <a href="details.jsp">DETAILS</a>
+=======
+<body bgcolor="#388B8A">
+<center><u>CRUD OPERATIONS</u></center><br><br>
+<h3><u>List Of Operations</u></h3>
+<a href="insert.jsp">INSERT</a><br/>
+<a href="fetch.jsp">FETCH</a>
+
+>>>>>>> branch 'master' of https://github.com/kishore5018/vamsi.git
 </body>
 </html>
