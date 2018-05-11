@@ -13,16 +13,19 @@
 <body>
 <%
 try{
-int Id=Integer.parseInt(request.getParameter("id"));
+String username=request.getParameter("user");
 Class.forName("oracle.jdbc.driver.OracleDriver");
 Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","cubic","cubic");
-PreparedStatement pstmt=conn.prepareStatement("select* from empdata where id=?");
-pstmt.setInt(1,Id);
+PreparedStatement pstmt=conn.prepareStatement("select * from empdata where username=?");
+pstmt.setString(1, username);
 ResultSet rs=pstmt.executeQuery();
 boolean req=rs.next();
 %>
 <form action="deleteservlet" method="post">
-Id:<input type="text" name="id"  value=<%=rs.getInt("id") %> ><br><br>
+UserName:<input type="text" name="username"  value=<%=rs.getString("username") %>><br><br>
+PassWord:<input type="text" name="password"  value=<%=rs.getString("password") %>><br><br>
+Email::::<input type="text" name="email"     value=<%=rs.getString("email") %>><br><br>
+Id:::::::<input type="text" name="id"        value=<%=rs.getInt("id") %>><br><br>
 <input type="submit" value="DELETE">
 
 </form>

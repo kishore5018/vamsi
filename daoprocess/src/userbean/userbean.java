@@ -1,18 +1,21 @@
 package userbean;
 
-public class userbean {
-
+public class userbean 
+{
 	private String username;
 	private String password;
 	private String email;
 	private int id;
-	public String getUsername() {
+	public String getUsername() 
+	{
 		return username;
 	}
-	public void setUsername(String username) {
+	public void setUsername(String username) 
+	{
 		this.username = username;
 	}
-	public String getPassword() {
+	public String getPassword() 
+	{
 		return password;
 	}
 	public void setPassword(String password) {

@@ -13,8 +13,8 @@ public static void delete(userbean user) {
 	try {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","cubic","cubic");
-		PreparedStatement pstmt=conn.prepareStatement("delete from empdata where id=?");
-		pstmt.setInt(1, user.getId());	
+		PreparedStatement pstmt=conn.prepareStatement("delete from empdata where username=?");
+		pstmt.setString(1, user.getUsername());	
 		int i=pstmt.executeUpdate();
 		if(i==1) {
 			System.out.println("delete success");

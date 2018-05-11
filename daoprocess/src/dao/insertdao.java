@@ -6,11 +6,12 @@ import java.sql.PreparedStatement;
 
 import userbean.userbean;
 
-public class insertdao {
-
-	public static void insert(userbean user) {
-		
-		try {
+public class insertdao 
+{
+	public static void insert(userbean user) 
+	{
+		try 
+		{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","cubic","cubic");
 			PreparedStatement pstmt=conn.prepareStatement("insert into empdata(username,password,email,id) values (?,?,?,?)");
@@ -19,20 +20,18 @@ public class insertdao {
 			pstmt.setString(3, user.getEmail());
 			pstmt.setInt(4, user.getId());
 			int i=pstmt.executeUpdate();
-			if(i==1) {
+			if(i==1) 
+			{
 				System.out.println("insertsuccess");
-			}else {
+			}
+			else 
+			{
 				System.out.println("insert not success");
 			}
-			
-			
-			
-		}catch(Exception e) {
+		}
+		catch(Exception e) 
+		{
 			System.out.println(e);
 		}
-		
-		
-		
 	}
-
 }

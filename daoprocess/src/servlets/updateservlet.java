@@ -12,11 +12,10 @@ import dao.updatedao;
 import userbean.userbean;
 
 @WebServlet("/updateservlet")
-public class updateservlet extends HttpServlet{
-	
-	
-	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException {
-		System.out.println("hai");
+public class updateservlet extends HttpServlet
+{
+	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException 
+	{
 		userbean user=new userbean();
 		user.setUsername(request.getParameter("username"));
 		user.setPassword(request.getParameter("password"));
@@ -24,10 +23,5 @@ public class updateservlet extends HttpServlet{
 		user.setId(Integer.parseInt(request.getParameter("id")));
 		updatedao.update(user);
 		response.sendRedirect("fetch.jsp");
-		
-		
-		
 	}
-	
-
 }

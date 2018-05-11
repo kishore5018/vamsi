@@ -20,7 +20,7 @@ public class updatedao {
 			pstmt.setInt(3, user.getId());
 			int i=pstmt.executeUpdate();
 			if(i==1) {
-				System.out.println("updatesuccess");
+				System.out.println("update success");
 			}else {
 				System.out.println("update not success");
 			}

@@ -11,10 +11,12 @@ import dao.insertdao;
 import userbean.userbean;
 
 @WebServlet("/insertservlet")
-public class insertservlet extends HttpServlet{
+public class insertservlet extends HttpServlet
+{
 	private static final long serialVersionUID = 1L;
 
-	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException {
+	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException 
+	{
 		System.out.println("hai");
 		userbean user=new userbean();
 		user.setUsername(request.getParameter("username"));
@@ -22,11 +24,6 @@ public class insertservlet extends HttpServlet{
 		user.setEmail(request.getParameter("email"));
 		user.setId(Integer.parseInt(request.getParameter("id")));
 		insertdao.insert(user);
-		response.sendRedirect("insertsuccess.jsp");
-		
-		
-		
+		response.sendRedirect("insertsuccess.jsp");	
 	}
-	
-
 }
